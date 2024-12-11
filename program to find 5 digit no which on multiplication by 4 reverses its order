@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int reverse(int n) {
+int result=0;
+while(n>0){
+result=result*10+n%10;
+n/=10;
+}
+
+return result;
+}
+int main() {
+for(int i=10000; i <= 25000; i++){
+if (i*4 == reverse(i)) printf("The number is :%d\n", i);
+}
+}
